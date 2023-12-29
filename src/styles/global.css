@@ -66,3 +66,58 @@ a {
   align-items: center;
   gap: 2rem;
 }
+
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #ff9b85;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll linear;
+  animation-timeline: scroll();
+}
+
+/* .header-content {
+  animation: fadeOut linear;
+  animation-timeline: view();
+  animation-range: exit -20rem;
+} */
+
+@keyframes scroll {
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  section {
+    scale: 0.8;
+    opacity: 0;
+    animation: fadeIn linear forwards;
+    animation-timeline: view();
+    animation-range: 25rem 50rem;
+    /* animation-range-start: cover;
+    animation-range-end: 700px; */
+  }
+
+  @keyframes fadeIn {
+    /* from {
+      scale: 0.8;
+      opacity: 0;
+    } */
+
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+}
