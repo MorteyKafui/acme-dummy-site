@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "BespokeStencil-Variable";
+  src: url("/fonts/BespokeStencil-Variable.woff2") format("woff2"),
+    url("/fonts/BespokeStencil-Variable.woff") format("woff"),
+    url("/fonts/BespokeStencil-Variable.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Supreme-Variable";
+  src: url("../fonts/Supreme-Variable.woff2") format("woff2"),
+    url("../fonts/Supreme-Variable.woff") format("woff"),
+    url("../fonts/Supreme-Variable.ttf") format("truetype");
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "BespokeStencil-Variable";
+  font-weight: 900;
+}
+
+body {
+  font-family: "Supreme-Variable";
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #031927;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
